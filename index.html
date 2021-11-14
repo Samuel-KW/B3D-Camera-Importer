@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<img src="tests/example.jpg" style="display: none;">
+
+	<div class="overlay">
+		<button id="start" style="flex: 100%">Start</button>
+
+		<hr>
+
+		<div id="orientation">
+			<h3>Rotation</h3>
+			<div id="alpha">0</div>
+			<div id="beta">0</div>
+			<div id="gamma">0</div>
+		</div>
+
+		<div id="location">
+			<h3>Location</h3>
+			<div id="x">0</div>
+			<div id="y">0</div>
+			<div id="x">0</div>
+		</div>
+
+		<hr>
+
+		<form name="ws_form">
+			<div><textarea name="outputtext"></textarea></div>
+			<div><textarea name="inputtext" ></textarea></div>
+			<div><textarea name="url"></textarea></div>
+			<div>
+				<input type="button" name="sendButton" value="Send" onClick="sendText();">
+				<input type="button" name="clearButton" value="Clear" onClick="clearText();">
+				<input type="button" name="disconnectButton" value="Disconnect" onClick="doDisconnect();">
+				<input type="button" name="connectButton" value="Connect" onClick="doConnect();">
+			</div>
+		</form>
+
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="lib/vr.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+
+    <script src="websocket.js"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
